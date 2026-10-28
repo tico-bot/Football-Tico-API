@@ -14,7 +14,7 @@ router.get('/:serie', async (req, res, next) => {
   catch (error) { next(error); }
 });
 router.get('/:serie/standings', async (req, res, next) => {
-  try { sendResult(res, await service.getStandings(req.params.serie)); }
+  try { sendResult(res, await service.getStandings(req.params.serie, req.query.group)); }
   catch (error) { next(error); }
 });
 router.get('/:serie/table', async (req, res, next) => {

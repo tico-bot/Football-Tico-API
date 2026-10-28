@@ -1,8 +1,22 @@
 {
-  "name":"brasileirao-api","version":"1.0.0",
-  "description":"API independente para as Séries A, B, C e D do Campeonato Brasileiro",
-  "main":"src/server.js","type":"commonjs",
-  "scripts":{"start":"node src/server.js","dev":"node --watch src/server.js","check":"node --check src/server.js && node --check src/routes/brasileirao.js && node --check src/services/brasileirao.js && node --check src/services/cache.js"},
-  "engines":{"node":">=20"},
-  "dependencies":{"campeonato-brasileiro-api":"^2.0.1","cors":"^2.8.5","dotenv":"^16.6.1","express":"^5.1.0","helmet":"^8.1.0"}
+  "name": "futebol-api",
+  "version": "2.0.0",
+  "description": "API extensível para dados de futebol brasileiro e internacional",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/routes/brasileirao.js && node --check src/routes/futebol.js && node --check src/services/brasileirao.js && node --check src/services/football-data.js && node --check src/services/cache.js",
+    "test": "node --test",
+    "test:security": "node --test test/api.test.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "campeonato-brasileiro-api": "^2.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  }
 }
